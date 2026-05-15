@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sid — Web Developer & UI/UX Enthusiast. Portfolio showcasing modern web projects and skills.">
+    <meta name="keywords" content="web developer, portfolio, UI/UX, PHP, JavaScript, HTML, CSS">
+    <meta name="author" content="Sid">
+    <meta property="og:title" content="Sid — Web Developer Portfolio">
+    <meta property="og:description" content="Web Developer | UI/UX Enthusiast | Student">
+    <meta property="og:type" content="website">
+    <title>Sid — Web Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ══════════════════════════════
+         LOADING SCREEN
+    ══════════════════════════════ -->
+    <div id="loader">
+        <div class="loader-inner">
+            <div class="loader-logo">Sid<span>.</span></div>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════
+         CUSTOM CURSOR
+    ══════════════════════════════ -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- ══════════════════════════════
+         NAVBAR
+    ══════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Sid<span>.</span></a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home"     class="nav-link active">Home</a></li>
+                <li><a href="#about"    class="nav-link">About</a></li>
+                <li><a href="#skills"   class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact"  class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Language Toggle -->
+            <button class="lang-toggle" id="langToggle" aria-label="Toggle language" title="Ganti Bahasa">
+                <span class="lang-icon">🌐</span>
+                <span class="lang-label" id="langLabel">ID</span>
+            </button>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ══════════════════════════════
+         HERO SECTION
+    ══════════════════════════════ -->
+    <section class="hero" id="home">
+        <!-- Background decorative elements -->
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-glow glow-1"></div>
+            <div class="hero-glow glow-2"></div>
+            <div class="hero-orb orb-1"></div>
+            <div class="hero-orb orb-2"></div>
+        </div>
+
+        <div class="hero-container">
+            <!-- Left: Text content -->
+            <div class="hero-content" data-reveal>
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Available for work
+                </div>
+
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Sid</span>
+                </h1>
+
+                <div class="hero-subtitle">
+                    <span class="typing-prefix">I'm a </span>
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+
+                <p class="hero-desc">
+                    Passionate about crafting beautiful, functional web experiences.
+                    I turn ideas into reality through clean code and thoughtful design.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="assets/CV_Muhammad_Alfi_Rasyid2.pdf" class="btn btn-ghost" download>
+                        <i class="fas fa-download"></i>
+                        <span>Download CV</span>
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">8+</span>
+                        <span class="stat-label">Skills</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Passion</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Profile image -->
+            <div class="hero-visual" data-reveal data-delay="200">
+                <div class="profile-wrapper">
+                    <div class="profile-ring ring-1"></div>
+                    <div class="profile-ring ring-2"></div>
+                    <div class="profile-ring ring-3"></div>
+                    <div class="profile-img-wrap">
+                        <!-- Placeholder profile image (ganti dengan foto Anda) -->
+                        <!-- <div class="profile-placeholder"> -->
+                            <!-- <i class="fas fa-user"></i> -->
+                        <!-- </div> -->
+                        <!-- Uncomment baris di bawah jika sudah punya foto -->
+                        <img src="assets/{images,icons}/foto.jpg" alt="Sid" loading="lazy">
+                    </div>
+                    <!-- Floating badges -->
+                    <div class="float-badge badge-html">
+                        <i class="fab fa-html5"></i> HTML5
+                    </div>
+                    <div class="float-badge badge-php">
+                        <i class="fab fa-php"></i> PHP
+                    </div>
+                    <div class="float-badge badge-js">
+                        <i class="fab fa-js"></i> JS
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll down</span>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         ABOUT SECTION
+    ══════════════════════════════ -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-tag">// about me</span>
+                <h2 class="section-title">Who I Am</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text" data-reveal>
+                    <p class="about-lead">
+                        I'm <strong>Sid</strong>, a passionate web developer and student who loves building
+                        things for the web. I believe great software is both beautiful and functional.
+                    </p>
+                    <p>
+                        My journey started with curiosity about how websites work, and it grew into a deep
+                        passion for crafting digital experiences. I focus on writing clean, efficient code
+                        and creating interfaces that users actually enjoy using.
+                    </p>
+                    <p>
+                        When I'm not coding, I'm exploring new technologies, studying UI/UX principles,
+                        or working on personal projects that solve real problems for real people —
+                        like the <strong>WantaCell</strong> catalog system I built for my family's business.
+                    </p>
+
+                    <div class="about-tags">
+                        <span class="tag">🎓 Student</span>
+                        <span class="tag">💻 Self-taught</span>
+                        <span class="tag">🎨 UI/UX Lover</span>
+                        <span class="tag">🚀 Fast Learner</span>
+                        <span class="tag">🛠️ Problem Solver</span>
+                    </div>
+                </div>
+
+                <div class="about-cards" data-reveal data-delay="150">
+                    <div class="about-card glass">
+                        <div class="about-card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Clean Code</h3>
+                        <p>I write readable, maintainable code following best practices and modern standards.</p>
+                    </div>
+                    <div class="about-card glass">
+                        <div class="about-card-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Good Design</h3>
+                        <p>UI/UX matters. I care about every pixel and create interfaces that delight users.</p>
+                    </div>
+                    <div class="about-card glass">
+                        <div class="about-card-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Fast Delivery</h3>
+                        <p>I work efficiently and deliver projects on time without compromising quality.</p>
+                    </div>
+                    <div class="about-card glass">
+                        <div class="about-card-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Always Learning</h3>
+                        <p>Tech evolves fast. I'm constantly learning new tools and improving my skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         SKILLS SECTION
+    ══════════════════════════════ -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-tag">// skills</span>
+                <h2 class="section-title">What I Work With</h2>
+            </div>
+
+            <div class="skills-grid" data-reveal>
+
+                <div class="skill-card glass" data-delay="0">
+                    <div class="skill-icon" style="color:#e34f26">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="skill-info">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML5</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="90" style="background:linear-gradient(90deg,#e34f26,#f06529)"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass" data-delay="60">
+                    <div class="skill-icon" style="color:#264de4">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div class="skill-info">
+                        <div class="skill-header">
+                            <span class="skill-name">CSS3</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="85" style="background:linear-gradient(90deg,#264de4,#2965f1)"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass" data-delay="120">
+                    <div class="skill-icon" style="color:#f7df1e">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <div class="skill-info">
+                        <div class="skill-header">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="75" style="background:linear-gradient(90deg,#f7df1e,#ffc107)"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass" data-delay="180">
+                    <div class="skill-icon" style="color:#777bb4">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <div class="skill-info">
+                        <div class="skill-header">
+                            <span class="skill-name">PHP</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="80" style="background:linear-gradient(90deg,#777bb4,#9b59b6)"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass" data-delay="240">
+                    <div class="skill-icon" style="color:#00758f">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="skill-info">
+                        <div class="skill-header">
+                            <span class="skill-name">MySQL</span>
+                            <span class="skill-percent">78%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="78" style="background:linear-gradient(90deg,#00758f,#00a8cc)"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass" data-delay="300">
+                    <div class="skill-icon" style="color:#7952b3">
+                        <i class="fab fa-bootstrap"></i>
+                    </div>
+                    <div class="skill-info">
+                        <div class="skill-header">
+                            <span class="skill-name">Bootstrap</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="85" style="background:linear-gradient(90deg,#7952b3,#9d6bde)"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass" data-delay="360">
+                    <div class="skill-icon" style="color:#f05032">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <div class="skill-info">
+                        <div class="skill-header">
+                            <span class="skill-name">Git & GitHub</span>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="70" style="background:linear-gradient(90deg,#f05032,#e44d26)"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass" data-delay="420">
+                    <div class="skill-icon" style="color:#f24e1e">
+                        <i class="fab fa-figma"></i>
+                    </div>
+                    <div class="skill-info">
+                        <div class="skill-header">
+                            <span class="skill-name">Figma</span>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="65" style="background:linear-gradient(90deg,#f24e1e,#ff7262)"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         PROJECTS SECTION
+    ══════════════════════════════ -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-tag">// projects</span>
+                <h2 class="section-title">Things I've Built</h2>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card glass" data-reveal data-delay="0">
+                    <div class="project-img">
+                        <div class="project-placeholder" style="background:linear-gradient(135deg,#0f2027,#203a43,#2c5364)">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="project-number">01</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">WantaCell Catalog</h3>
+                        <p class="project-desc">Katalog harga digital untuk warung keluarga. Menampilkan harga eceran & grosir, manajemen produk, dan riwayat harga otomatis.</p>
+                        <div class="project-tech">
+                            <span>PHP</span><span>MySQL</span><span>Bootstrap</span><span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-btn project-btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass" data-reveal data-delay="100">
+                    <div class="project-img">
+                        <div class="project-placeholder" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="project-number">02</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">BRILink Wanta</h3>
+                        <p class="project-desc">Sistem manajemen agen BRILink untuk mencatat transaksi, laporan keuangan harian, dan rekap nasabah secara digital.</p>
+                        <div class="project-tech">
+                            <span>PHP</span><span>MySQL</span><span>Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-btn project-btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass" data-reveal data-delay="200">
+                    <div class="project-img">
+                        <div class="project-placeholder" style="background:linear-gradient(135deg,#0d0d0d,#1a0533,#2d1b69)">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="project-number">03</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Time In Class</h3>
+                        <p class="project-desc">Aplikasi absensi digital berbasis web untuk pencatatan kehadiran siswa dengan laporan real-time dan export data.</p>
+                        <div class="project-tech">
+                            <span>PHP</span><span>MySQL</span><span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-btn project-btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card glass" data-reveal data-delay="0">
+                    <div class="project-img">
+                        <div class="project-placeholder" style="background:linear-gradient(135deg,#0f0c29,#302b63,#24243e)">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="project-number">04</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Sistem Event</h3>
+                        <p class="project-desc">Platform manajemen event dengan fitur registrasi peserta, jadwal acara, dan notifikasi otomatis berbasis web.</p>
+                        <div class="project-tech">
+                            <span>PHP</span><span>MySQL</span><span>Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-btn project-btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card glass" data-reveal data-delay="100">
+                    <div class="project-img">
+                        <div class="project-placeholder" style="background:linear-gradient(135deg,#0a0a0a,#1c1c2e,#16213e)">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="project-number">05</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Website Portofolio</h3>
+                        <p class="project-desc">Website portofolio pribadi dengan dark mode premium, animasi smooth, typing effect, dan desain modern yang responsif.</p>
+                        <div class="project-tech">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-btn project-btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card glass" data-reveal data-delay="200">
+                    <div class="project-img">
+                        <div class="project-placeholder" style="background:linear-gradient(135deg,#0d1117,#161b22,#21262d)">
+                            <i class="fas fa-thermometer-half"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="project-number">06</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Konversi Suhu</h3>
+                        <p class="project-desc">Aplikasi konversi suhu interaktif yang mengkonversi Celsius, Fahrenheit, Kelvin, dan Reamur secara real-time.</p>
+                        <div class="project-tech">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-btn project-btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         CONTACT SECTION
+    ══════════════════════════════ -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-tag">// contact</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-desc">Have a project in mind? Let's talk and make something great.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info" data-reveal>
+                    <h3>Get In Touch</h3>
+                    <p>I'm currently open to new opportunities and collaborations. Whether you have a project, question, or just want to say hi — my inbox is always open!</p>
+
+                    <div class="contact-links">
+                        <a href="mailto:alfirasyidd77@gmail.com" class="contact-link">
+                            <div class="contact-link-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="contact-link-label">Email</span>
+                                <span class="contact-link-value">alfirasyidd77@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/a.rrsid?igsh=bG40ZTBvYjQ2Y29l" target="_blank" class="contact-link">
+                            <div class="contact-link-icon" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)"><i class="fab fa-instagram"></i></div>
+                            <div>
+                                <span class="contact-link-label">Instagram</span>
+                                <span class="contact-link-value">@a.rrsid</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/sid" target="_blank" class="contact-link">
+                            <div class="contact-link-icon" style="background:#24292e"><i class="fab fa-github"></i></div>
+                            <div>
+                                <span class="contact-link-label">GitHub</span>
+                                <span class="contact-link-value">github.com/sid</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/alfi-rasyid-21688940a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="contact-link">
+                            <div class="contact-link-icon" style="background:#0077b5"><i class="fab fa-linkedin-in"></i></div>
+                            <div>
+                                <span class="contact-link-label">LinkedIn</span>
+                                <span class="contact-link-value">linkedin.com/in/alfi-rasyid</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrap glass" data-reveal data-delay="150">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/mbdwvwvb" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <div class="form-success" id="formSuccess">
+                            <i class="fas fa-check-circle"></i>
+                            Message sent! I'll get back to you soon.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         FOOTER
+    ══════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">Sid<span>.</span></div>
+                <p class="footer-text">© 2026 Sid. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/a.rrsid?igsh=bG40ZTBvYjQ2Y29l" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:sid@email.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+    <script src="translate.js"></script>
+</body>
+</html>
