@@ -33,12 +33,12 @@ const translations = {
     'about-tag':   { en: '// about me',  id: '// tentang saya' },
     'about-title': { en: 'Who I Am',     id: 'Siapa Saya' },
     'about-lead':  {
-        en: "I'm <strong>Alfi</strong>, also known as <strong>Sid</strong>, a passionate Junior Web Developer and fresh graduate who enjoys building things for the web. I believe great software is both beautiful and functional.",
-        id: 'Saya <strong>Alfi</strong> atau bisa dipanggil <strong>Sid</strong>, saya seorang junior web developer yang bersemangat dan fresh graduate yang suka membangun sesuatu di web. Saya percaya perangkat lunak yang hebat harus indah sekaligus fungsional.'
+        en: "I'm <strong>Alfi</strong>, also known as <strong>Sid</strong>, and I am a fresh graduate from SMK Adi Sanggoro and a passionate Junior Web Developer who enjoys building things for the web. I believe that great software should be both visually appealing and highly functional.",
+        id: 'Saya <strong>Alfi</strong> atau bisa dipanggil <strong>Sid</strong>, saya fresh graduate dari SMK Adi Sanggoro dan seorang junior web developer yang bersemangat dan suka membangun sesuatu di web. Saya percaya perangkat lunak yang hebat harus indah sekaligus fungsional.'
     },
     'about-p2': {
-        en: 'My journey started with curiosity about how websites work, and it grew into a deep passion for crafting digital experiences. I focus on writing clean, efficient code and creating interfaces that users actually enjoy using.',
-        id: 'Perjalanan saya dimulai dari rasa penasaran tentang cara kerja website, dan tumbuh menjadi kecintaan mendalam dalam menciptakan pengalaman digital. Saya fokus menulis kode yang bersih dan efisien serta membuat antarmuka yang benar-benar nyaman digunakan.'
+        en: 'My journey began when I entered the world of Information Technology at SMK Adi Sanggoro. From that point, my curiosity about how websites work grew into a strong passion for creating meaningful digital experiences. I focus on writing clean and efficient code while building interfaces that are intuitive, responsive, and comfortable to use.',
+        id: 'Perjalanan saya dimulai saat saya memasuki dunia IT di SMK Adi Sanggoro dan dari situ rasa penasaran saya tentang cara kerja website muncul dan tumbuh menjadi kecintaan mendalam dalam menciptakan pengalaman digital. Saya fokus menulis kode yang bersih dan efisien serta membuat antarmuka yang benar-benar nyaman digunakan.'
     },
     'about-p3': {
         en: "When I'm not coding, I'm exploring new technologies, studying UI/UX principles, or working on personal projects that solve real problems for real people — like the <strong>WantaCell</strong> catalog system I built for my family's business.",
