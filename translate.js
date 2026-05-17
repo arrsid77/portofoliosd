@@ -13,6 +13,7 @@ const translations = {
     'nav-skills':   { en: 'Skills',   id: 'Keahlian' },
     'nav-projects': { en: 'Projects', id: 'Proyek' },
     'nav-contact':  { en: 'Contact',  id: 'Kontak' },
+    'nav-experience':{ en: 'Experience', id: 'Pengalaman' },
 
     // ── HERO ─────────────────────────────────────────────────
     'hero-badge':       { en: 'Available for work',    id: 'Siap untuk bekerja' },
@@ -44,6 +45,10 @@ const translations = {
         en: "When I'm not coding, I'm exploring new technologies, studying UI/UX principles, or working on personal projects that solve real problems for real people — like the <strong>WantaCell</strong> catalog system I built for my family's business.",
         id: 'Saat tidak coding, saya menjelajahi teknologi baru, mempelajari prinsip UI/UX, atau mengerjakan proyek pribadi yang memecahkan masalah nyata — seperti sistem katalog <strong>WantaCell</strong> yang saya buat untuk usaha keluarga.'
     },
+    'about-p4': {
+        en: "Beyond web development, I also have experience as a person in charge in departmental organizational activities and helping with family store operations. This experience has shaped my ability to communicate, lead a team, and provide good service to customers.",
+        id: 'Di luar web development, saya juga memiliki pengalaman sebagai penanggung jawab dalam kegiatan organisasi jurusan serta membantu operasional toko keluarga. Pengalaman tersebut membentuk kemampuan saya dalam berkomunikasi, memimpin tim, dan memberikan pelayanan yang baik kepada pelanggan.'
+    },
     'tag-student':  { en: '🎓 Fresh Graduate',       id: '🎓 Fresh Graduate' },
     'tag-self':     { en: '💻 Self-taught',    id: '💻 Otodidak' },
     'tag-uiux':     { en: '🎨 UI/UX Lover',   id: '🎨 Pecinta UI/UX' },
@@ -74,8 +79,8 @@ const translations = {
         id: 'Katalog harga digital untuk warung keluarga. Menampilkan harga eceran & grosir, manajemen produk, dan riwayat harga otomatis.'
     },
     'proj2-desc': {
-        en: 'BRILink agent management system to record transactions, daily financial reports, and digital customer recaps.',
-        id: 'Sistem manajemen agen BRILink untuk mencatat transaksi, laporan keuangan harian, dan rekap nasabah secara digital.'
+        en: 'Makes it easier for customers to create new accounts through the BRILink Wanta website without having to go through a bank.',
+        id: 'Memudahkan pelanggan dalam membuat rekening baru melalui website BRILink Wanta tanpa harus melalui bank.'
     },
     'proj3-desc': {
         en: 'Web-based digital attendance app for recording student attendance with real-time reports and data export.',
@@ -138,7 +143,7 @@ function applyTranslation(lang) {
 
     // NAVBAR links
     const navLinks = document.querySelectorAll('.nav-link');
-    const navKeys  = ['nav-home','nav-about','nav-skills','nav-projects','nav-contact'];
+    const navKeys  = ['nav-home','nav-about','nav-skills','nav-experience','nav-projects','nav-contact'];
     navLinks.forEach((el, i) => {
         if (navKeys[i]) setTextAnimated(el, t[navKeys[i]][lang]);
     });
@@ -187,6 +192,7 @@ function applyTranslation(lang) {
     if (aboutParas[0]) setTextAnimated(aboutParas[0], t['about-lead'][lang]);
     if (aboutParas[1]) setTextAnimated(aboutParas[1], t['about-p2'][lang]);
     if (aboutParas[2]) setTextAnimated(aboutParas[2], t['about-p3'][lang]);
+    if (aboutParas[3]) setTextAnimated(aboutParas[3], t['about-p4'][lang]);
 
     // About tags
     const tags    = document.querySelectorAll('.about-tags .tag');
@@ -336,3 +342,176 @@ window.typingWordsCurrent = translations['typing-words']['en'];
 
 // Expose helper untuk script.js jika perlu sinkronisasi
 window.getCurrentTypingWords = () => window.typingWordsCurrent;
+
+// ══════════════════════════════════════════════════════════════
+// TRANSLATIONS EXTENSION — Experience, Beyond Coding, Soft Skills
+// Ditambahkan sebagai extension dari applyTranslation yang sudah ada
+// ══════════════════════════════════════════════════════════════
+
+const newTranslations = {
+
+    // ── EXPERIENCE ────────────────────────────────────────────
+    'exp-tag':                { en: '// experience',       id: '// pengalaman' },
+    'exp-title':              { en: 'My Experience',       id: 'Pengalaman Saya' },
+    'exp-webdev-heading':     { en: 'Web Development',     id: 'Web Development' },
+    'exp-additional-heading': { en: 'Additional Experience', id: 'Pengalaman Tambahan' },
+    'exp-badge-personal':     { en: 'Personal Project',    id: 'Proyek Pribadi' },
+    'exp-badge-student':      { en: 'Student Project',     id: 'Proyek Siswa' },
+    'exp-badge-org':          { en: 'Organizational',      id: 'Organisasi' },
+    'exp-badge-store':        { en: 'Store',               id: 'Toko' },
+    'exp-item1-title': { en: 'Web Developer for Family Business',  id: 'Web Developer untuk Usaha Keluarga' },
+    'exp-item1-desc':  {
+        en: 'Building web applications for real-world needs, including a digital price catalog system (WantaCell) for a family business, covering full-stack development with PHP, MySQL, and Bootstrap.',
+        id: 'Membangun aplikasi web untuk kebutuhan nyata, termasuk sistem katalog harga digital (WantaCell) untuk usaha keluarga, mencakup pengembangan full-stack dengan PHP, MySQL, dan Bootstrap.'
+    },
+    'exp-item2-title': { en: 'Web Development Student',  id: 'Siswa Web Development' },
+    'exp-item2-desc':  {
+        en: 'Actively learning and building web projects ranging from attendance systems, event management, to temperature converter applications while studying web technologies at SMK Adi Sanggoro.',
+        id: 'Aktif belajar dan membangun proyek web mulai dari sistem absensi, manajemen event, hingga aplikasi konversi suhu sambil mempelajari teknologi web di SMK Adi Sanggoro.'
+    },
+    'exp-item3-title': { en: 'Organizational Experience', id: 'Pengalaman Organisasi' },
+    'exp-item3-desc':  {
+        en: 'As a Person in Charge (PJ) in departmental organizational activities, I was responsible for coordinating activities, communicating with team members, and ensuring events ran well.',
+        id: 'Sebagai Penanggung Jawab (PJ) pada kegiatan organisasi jurusan, saya bertanggung jawab mengoordinasikan jalannya kegiatan, berkomunikasi dengan anggota tim, dan memastikan acara berjalan dengan baik.'
+    },
+    'exp-item4-title': { en: 'Store Assistant', id: 'Asisten Toko' },
+    'exp-item4-desc':  {
+        en: 'Helping with family store operations by serving customers, managing product stock, and handling daily activities. This experience helped me develop customer service skills, responsibility, and stock management.',
+        id: 'Membantu operasional toko keluarga dengan melayani pelanggan, mengelola stok barang, dan menangani aktivitas harian. Pengalaman ini membantu saya mengembangkan keterampilan customer service, tanggung jawab, dan manajemen stok.'
+    },
+
+    // ── BEYOND CODING ─────────────────────────────────────────
+    'beyond-tag':      { en: '// beyond coding', id: '// di luar coding' },
+    'beyond-title':    { en: 'Beyond Coding',    id: 'Di Luar Coding' },
+    'beyond-desc': {
+        en: 'I believe that experience outside the coding world also plays an important role in shaping professional skills, especially in communication, leadership, and service.',
+        id: 'Saya percaya bahwa pengalaman di luar dunia coding juga berperan penting dalam membentuk keterampilan profesional, terutama dalam komunikasi, kepemimpinan, dan pelayanan.'
+    },
+    'beyond-c1-title': { en: 'Organizational Activities', id: 'Kegiatan Organisasi' },
+    'beyond-c1-desc':  {
+        en: 'Active in departmental organizational activities as Person in Charge, coordinating events and managing team communication effectively.',
+        id: 'Aktif dalam kegiatan organisasi jurusan sebagai Penanggung Jawab, mengoordinasikan acara dan mengelola komunikasi tim secara efektif.'
+    },
+    'beyond-c2-title': { en: 'Customer Service',    id: 'Pelayanan Pelanggan' },
+    'beyond-c2-desc':  {
+        en: 'Experienced in serving customers at a family store, developing communication, patience, and problem-solving skills in real situations.',
+        id: 'Berpengalaman melayani pelanggan di toko keluarga, mengembangkan keterampilan komunikasi, kesabaran, dan pemecahan masalah dalam situasi nyata.'
+    },
+    'beyond-c3-title': { en: 'Team Leadership',     id: 'Kepemimpinan Tim' },
+    'beyond-c3-desc':  {
+        en: 'Led small teams in organizational activities, learning how to motivate members, delegate tasks, and ensure goals are achieved together.',
+        id: 'Memimpin tim kecil dalam kegiatan organisasi, belajar cara memotivasi anggota, mendelegasikan tugas, dan memastikan tujuan tercapai bersama.'
+    },
+    'beyond-c4-title': { en: 'Inventory Management', id: 'Manajemen Stok' },
+    'beyond-c4-desc':  {
+        en: 'Managing product stock at a family store, recording incoming and outgoing goods, and maintaining data accuracy for daily operations.',
+        id: 'Mengelola stok produk di toko keluarga, mencatat barang masuk dan keluar, serta menjaga akurasi data untuk operasional harian.'
+    },
+
+    // ── SOFT SKILLS ───────────────────────────────────────────
+    'soft-tag':   { en: '// soft skills',            id: '// keterampilan' },
+    'soft-title': { en: 'Experience & Other Skills', id: 'Pengalaman & Keterampilan Lainnya' },
+    'soft-desc':  {
+        en: 'Beyond web development, I also have experience in organizational activities and store operations that helped me develop communication, leadership, and responsibility skills.',
+        id: 'Selain pengalaman saya di bidang web development, saya juga memiliki pengalaman dalam organisasi dan operasional toko yang membantu saya mengembangkan keterampilan komunikasi, kepemimpinan, dan tanggung jawab.'
+    },
+    'soft-leadership':    { en: 'Leadership',           id: 'Kepemimpinan' },
+    'soft-teamcoord':     { en: 'Team Coordination',    id: 'Koordinasi Tim' },
+    'soft-custservice':   { en: 'Customer Service',     id: 'Pelayanan Pelanggan' },
+    'soft-inventory':     { en: 'Inventory Management', id: 'Manajemen Stok' },
+    'soft-communication': { en: 'Communication',        id: 'Komunikasi' },
+    'soft-responsibility':{ en: 'Responsibility',       id: 'Tanggung Jawab' },
+    'soft-problemsolving':{ en: 'Problem Solving',      id: 'Pemecahan Masalah' },
+    'soft-timemanagement':{ en: 'Time Management',      id: 'Manajemen Waktu' },
+};
+
+// ── Extended translate function ───────────────────────────────
+function applyTranslationFull(lang) {
+    // Jalankan fungsi translate original dulu
+    applyTranslation(lang);
+
+    const nt = newTranslations;
+
+    // Helper: set teks by ID
+    function setId(id, html) {
+        const el = document.getElementById(id);
+        if (el) setTextAnimated(el, html);
+    }
+
+    // EXPERIENCE
+    setId('exp-tag',                nt['exp-tag'][lang]);
+    setId('exp-title',              nt['exp-title'][lang]);
+    setId('exp-webdev-heading',     nt['exp-webdev-heading'][lang]);
+    setId('exp-additional-heading', nt['exp-additional-heading'][lang]);
+    setId('exp-badge-personal',     nt['exp-badge-personal'][lang]);
+    setId('exp-badge-student',      nt['exp-badge-student'][lang]);
+    setId('exp-badge-org',          nt['exp-badge-org'][lang]);
+    setId('exp-badge-store',        nt['exp-badge-store'][lang]);
+    setId('exp-item1-title',        nt['exp-item1-title'][lang]);
+    setId('exp-item1-desc',         nt['exp-item1-desc'][lang]);
+    setId('exp-item2-title',        nt['exp-item2-title'][lang]);
+    setId('exp-item2-desc',         nt['exp-item2-desc'][lang]);
+    setId('exp-item3-title',        nt['exp-item3-title'][lang]);
+    setId('exp-item3-desc',         nt['exp-item3-desc'][lang]);
+    setId('exp-item4-title',        nt['exp-item4-title'][lang]);
+    setId('exp-item4-desc',         nt['exp-item4-desc'][lang]);
+
+    // BEYOND CODING
+    setId('beyond-tag',     nt['beyond-tag'][lang]);
+    setId('beyond-title',   nt['beyond-title'][lang]);
+    setId('beyond-desc',    nt['beyond-desc'][lang]);
+    setId('beyond-c1-title',nt['beyond-c1-title'][lang]);
+    setId('beyond-c1-desc', nt['beyond-c1-desc'][lang]);
+    setId('beyond-c2-title',nt['beyond-c2-title'][lang]);
+    setId('beyond-c2-desc', nt['beyond-c2-desc'][lang]);
+    setId('beyond-c3-title',nt['beyond-c3-title'][lang]);
+    setId('beyond-c3-desc', nt['beyond-c3-desc'][lang]);
+    setId('beyond-c4-title',nt['beyond-c4-title'][lang]);
+    setId('beyond-c4-desc', nt['beyond-c4-desc'][lang]);
+
+    // SOFT SKILLS
+    setId('soft-tag',           nt['soft-tag'][lang]);
+    setId('soft-title',         nt['soft-title'][lang]);
+    setId('soft-desc',          nt['soft-desc'][lang]);
+    setId('soft-leadership',    nt['soft-leadership'][lang]);
+    setId('soft-teamcoord',     nt['soft-teamcoord'][lang]);
+    setId('soft-custservice',   nt['soft-custservice'][lang]);
+    setId('soft-inventory',     nt['soft-inventory'][lang]);
+    setId('soft-communication', nt['soft-communication'][lang]);
+    setId('soft-responsibility',nt['soft-responsibility'][lang]);
+    setId('soft-problemsolving',nt['soft-problemsolving'][lang]);
+    setId('soft-timemanagement',nt['soft-timemanagement'][lang]);
+}
+
+// ── Override tombol langToggle pakai fungsi extended ──────────
+// Clone node agar event listener lama terlepas bersih
+(function() {
+    const oldBtn = document.getElementById('langToggle');
+    if (!oldBtn) return;
+    const newBtn = oldBtn.cloneNode(true);
+    oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+
+    newBtn.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'id' : 'en';
+
+        const lbl = document.getElementById('langLabel');
+        if (lbl) lbl.textContent = currentLang === 'id' ? 'EN' : 'ID';
+        newBtn.classList.toggle('active', currentLang === 'id');
+
+        newBtn.style.transform = 'scale(.93)';
+        setTimeout(() => newBtn.style.transform = '', 150);
+
+        applyTranslationFull(currentLang);
+        localStorage.setItem('sid-lang', currentLang);
+    });
+
+    // Restore saved preference
+    const saved = localStorage.getItem('sid-lang');
+    if (saved && saved !== 'en') {
+        currentLang = saved;
+        const lbl = document.getElementById('langLabel');
+        if (lbl) lbl.textContent = 'EN';
+        newBtn.classList.add('active');
+        setTimeout(() => applyTranslationFull(saved), 2400);
+    }
+})();
